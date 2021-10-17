@@ -1,24 +1,14 @@
-package Edureka;
-import java.util.Scanner;
-public class Factorial {
-public static void main(String args[]){
-//Scanner object for capturing the user input
-Scanner scanner = new Scanner(System.in);
-System.out.println("Enter the number:");
-//Stored the entered value in variable
-int num = scanner.nextInt();
-//Called the user defined function fact
-int factorial = fact(num);
-System.out.println("Factorial of entered number is: "+factorial);
-}
-static int fact(int n)
-{
-int output;
-if(n==1){
-return 1;
-}
-//Recursion: Function calling itself!!
-output = fact(n-1)* n;
-return output;
-}
-}
+class FactorialExample2{  
+ static int factorial(int n){    
+  if (n == 0)    
+    return 1;    
+  else    
+    return(n * factorial(n-1));    
+ }    
+ public static void main(String args[]){  
+  int i,fact=1;  
+  int number=4;//It is the number to calculate factorial    
+  fact = factorial(number);   
+  System.out.println("Factorial of "+number+" is: "+fact);    
+ }  
+}  
